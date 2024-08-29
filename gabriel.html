@@ -1,0 +1,31 @@
+function setup() {
+  createCanvas(1000, 1000, WEBGL);
+
+  // Enable debug mode.
+  // Display the grid and axes icon and customize them:
+  // Grid
+  // ----
+  // - size: 50000
+  // - divisions: 10
+  // - offsets: 0, 20, 0
+  // Axes
+  // ----
+  // - size: 50
+  // - offsets: 0, 0, 0
+  debugMode(50, 10, 0, 20, 0, 50, 0, 0, 0);
+
+  describe('A multicolor box on a gray background. A grid is displayed below the box. An axes icon is displayed at the center of the box.');
+}
+
+function draw() {
+  background(200);
+
+  // Enable orbiting with the mouse.
+  orbitControl();
+
+  // Style the box.
+  normalMaterial();
+
+  // Draw the box.
+  box(20, 40);
+}
